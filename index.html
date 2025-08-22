@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>음료 디스펜서 주문 시스템</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🥤 음료 디스펜서</h1>
+            <p>신선하고 맛있는 커피를 주문하세요</p>
+        </header>
+
+        <main>
+            <!-- 메뉴 선택 섹션 -->
+            <section class="menu-section">
+                <h2>메뉴 선택</h2>
+                <div class="menu-grid" id="menuGrid">
+                    <!-- 메뉴 아이템들이 JavaScript로 동적 생성됩니다 -->
+                </div>
+            </section>
+
+            <!-- 주문 정보 입력 섹션 -->
+            <section class="order-section">
+                <h2>주문 정보</h2>
+                <form id="orderForm">
+                    <div class="form-group">
+                        <label for="customerName">이름:</label>
+                        <input type="text" id="customerName" name="customerName" required 
+                               placeholder="이름을 입력하세요">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phoneNumber">연락처 (선택사항):</label>
+                        <input type="tel" id="phoneNumber" name="phoneNumber" 
+                               placeholder="010-1234-5678">
+                    </div>
+
+                    <div class="order-summary" id="orderSummary">
+                        <h3>주문 내역</h3>
+                        <div id="orderList">
+                            <p>선택된 메뉴가 없습니다.</p>
+                        </div>
+                        <div class="total-price">
+                            <strong>총 가격: <span id="totalPrice">0</span>원</strong>
+                        </div>
+                    </div>
+
+                    <button type="submit" id="submitOrder" disabled>주문하기</button>
+                </form>
+            </section>
+
+            <!-- 주문 현황 섹션 -->
+            <section class="status-section">
+                <h2>실시간 주문 현황</h2>
+                <div id="orderStatus" class="status-display">
+                    <p>주문 현황을 불러오는 중...</p>
+                </div>
+                <button id="refreshStatus" class="refresh-btn">새로고침</button>
+            </section>
+        </main>
+
+        <!-- 주문 완료 모달 -->
+        <div id="orderCompleteModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>주문 완료!</h2>
+                <p>주문번호: <span id="orderNumber"></span></p>
+                <p>주문이 성공적으로 접수되었습니다.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
