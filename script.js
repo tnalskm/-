@@ -1,5 +1,5 @@
 // 구글 앱스 스크립트 웹앱 URL (배포 후 여기에 실제 URL을 입력하세요)
-const GOOGLE_APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxTJDKCPlV8Hna5fxtqOwZjDI5tQwAO983X7hbhcRo6qSFwfoxbFya-f1hFgZcoXB2e/exec';
+const GOOGLE_APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzdWjDvu9dysnZyIXnkWZ39qOmAioAXand51SPRJEWev0Ta5AH8AB9zbd1FVgfZ3umA/exec';
 
 // 메뉴 데이터
 const menuData = [
